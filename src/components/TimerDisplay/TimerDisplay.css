@@ -1,0 +1,35 @@
+#timer input {
+	height: auto;
+	width: 80px;
+	text-align: center;
+	margin: 76px 10px 0 10px;
+	font-size: 3rem;
+	background: linear-gradient(
+		145deg,
+		var(--timer-display-background-gradient-light),
+		var(--timer-display-background-gradient-dark)
+	);
+	border-radius: 13px;
+	box-shadow: inset 15.02px 15.02px 7px
+			var(--timer-display-box-shadow-gradient-dark),
+		inset -15.02px -15.02px 7px var(--timer-display-box-shadow-gradient-light);
+	color: #5f5f5f;
+	font-family: 'Digital7Mono';
+	border: none;
+	text-shadow: 1px 1px 1px var(--timer-input-text-shadow);
+	transition: background 1s, box-shadow 0.2s ease-out;
+	pointer-events: none;
+	user-select: none;
+}
+
+#timer input.editable {
+	pointer-events: all;
+	user-select: none;
+	filter: none;
+	animation: pulsatingLight 2s ease infinite;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	opacity: 1;
+}

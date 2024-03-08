@@ -1,0 +1,108 @@
+button {
+	background: linear-gradient(
+		145deg,
+		var(--button-background-gradient-light),
+		var(--button-background-gradient-dark)
+	);
+	border-radius: 100%;
+	box-shadow: 9.91px 9.91px 15px var(--button-box-shadow-gradient-dark),
+		-9.91px -9.91px 15px var(--button-box-shadow-gradient-light);
+	border: none;
+	height: 60px;
+	width: 60px;
+	color: var(--font-color);
+	transition: box-shadow 0.000001ms, color 0.3s;
+}
+
+button.pill {
+	background: linear-gradient(
+		145deg,
+		var(--button-pill-background-gradient-light),
+		var(--button-pill-background-gradient-dark)
+	);
+	border-radius: 16px;
+	box-shadow: 4.31px 4.31px 11px var(--button-pill-box-shadow-gradient-dark),
+		-5.31px -5.31px 11px var(--button-pill-box-shadow-gradient-light);
+	height: 2rem;
+	width: 5rem;
+}
+
+button:hover {
+	cursor: pointer;
+	color: var(--blue-light);
+	text-shadow: 0px 0px 3px var(--button-hover-text);
+	transition: 0.5s;
+}
+
+button:active {
+	color: var(--blue-light);
+	background: linear-gradient(
+		145deg,
+		var(--button-background-gradient-light),
+		var(--button-background-gradient-dark)
+	);
+	border-radius: 100%;
+	box-shadow: inset 9.91px 9.91px 15px
+			var(--button-active-box-shadow-gradient-dark),
+		inset -9.91px -9.91px 15px var(--button-active-box-shadow-gradient-light);
+}
+
+button.pill:active {
+	background: var(--button-pill-background-active);
+	border-radius: 16px;
+	box-shadow: inset 9.31px 9.31px 11px
+			var(--button-pill-box-shadow-gradient-dark),
+		inset -7.31px -7.31px 11px var(--button-pill-box-shadow-gradient-light);
+	height: 2rem;
+	width: 5rem;
+}
+
+button.big {
+	font-size: 1rem;
+	height: 100px;
+	width: 100px;
+}
+
+.button-icon {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	font-size: 2rem;
+}
+
+.disabled {
+	pointer-events: none;
+	color: #ccc;
+	text-shadow: 0px 0px 2px var(--button-hover-text);
+}
+
+.disabled-notification {
+	pointer-events: none;
+	color: var(--blue-light);
+	text-shadow: 0px 0px 2px var(--button-hover-text);
+}
+
+/* Animation */
+
+.active-light {
+	animation: pulsatingLight 2s ease infinite;
+}
+
+button.pill.active-light {
+	animation: pulsatingLight 2s ease infinite;
+	box-shadow: 0px 0px 11px var(--button-pill-box-shadow-gradient-dark),
+		0px 0px 11px var(--button-pill-box-shadow-gradient-light);
+}
+
+@keyframes pulsatingLight {
+	0% {
+		filter: drop-shadow(0px 0px 1px var(--blue-light));
+	}
+
+	50% {
+		filter: drop-shadow(0px 0px 10px var(--blue-light));
+	}
+	to {
+		filter: drop-shadow(0px 0px 1px var(--blue-light));
+	}
+}

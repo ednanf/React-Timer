@@ -1,0 +1,105 @@
+@font-face {
+	font-family: 'Digital7Mono';
+	src: local('Digital7Mono'), url(./fonts/Digital7Mono.ttf) format('truetype');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Anta', sans-serif;
+}
+
+:root {
+	--bg-color: #eef0f4;
+	--blue-light: #00ddff;
+	--font-color: #9e9e9e;
+
+	--device-container-bg-l: #eef0f4;
+	--device-container-bg-d: #eef0f4;
+	--device-container-shadow-l: #ffffff;
+	--device-container-shadow-d: #ced0d3;
+
+	--timer-display-background-gradient-light: #ffffff;
+	--timer-display-background-gradient-dark: #a2a9b8;
+	--timer-display-box-shadow-gradient-light: #effaff;
+	--timer-display-box-shadow-gradient-dark: #b5bccd;
+	--timer-input-text-shadow: rgba(0, 0, 0, 0.2);
+
+	--indicator-active: #00ddff;
+	--indicator-color: rgba(226, 226, 226, 0.7);
+	--indicator-drop-shadow: #00ddff;
+
+	--button-hover-text: rgba(0, 221, 255, 0.5);
+	--button-background-gradient-light: #ffffff;
+	--button-background-gradient-dark: #c1c3c6;
+	--button-box-shadow-gradient-light: #ffffff;
+	--button-box-shadow-gradient-dark: #d9dade;
+	--button-active-box-shadow-gradient-light: #ffffff;
+	--button-active-box-shadow-gradient-dark: #d9dade;
+
+	--button-pill-background-gradient-light: #ffffff;
+	--button-pill-background-gradient-dark: #d4d6d9;
+	--button-pill-box-shadow-gradient-light: #ffffff;
+	--button-pill-box-shadow-gradient-dark: #c7c8cc;
+	--button-pill-background-active: #eef0f4;
+
+	--toggle-input-checked-backgrond-light: #00ddff;
+	--toggle-input-checked-backgrond-dark: #01a2bb;
+	--toggle-input-checked-drop-shadow: #00ddff;
+	--slider-background-color: #cccccc;
+	--slider-background-gradient-light: #ffffff;
+	--slider-background-gradient-dark: #cfd1d4;
+	--slider-before-background: #ffffff;
+}
+
+[data-theme='dark'] {
+	--bg-color: #545454;
+	--blue-light: #00ddff;
+	--font-color: #cccccc;
+
+	--device-container-bg-l: #656565;
+	--device-container-bg-d: #383838;
+	--device-container-shadow-l: #5e5e5e;
+	--device-container-shadow-d: #383838;
+
+	--timer-display-background-gradient-light: #7affff;
+	--timer-display-background-gradient-dark: #54b7bd;
+	--timer-display-box-shadow-gradient-light: #76ffff;
+	--timer-display-box-shadow-gradient-dark: #58c0c7;
+
+	--indicator-color: rgba(226, 226, 226, 0.1);
+
+	--button-hover-text: rgba(0, 221, 255, 0.5);
+	--button-background-gradient-light: #656565;
+	--button-background-gradient-dark: #383838;
+	--button-box-shadow-gradient-light: #535353;
+	--button-box-shadow-gradient-dark: #3b3b3b;
+	--button-active-box-shadow-gradient-light: #464646;
+	--button-active-box-shadow-gradient-dark: #3e3e3e;
+
+	--button-pill-background-gradient-light: #525151;
+	--button-pill-background-gradient-dark: #383838;
+	--button-pill-box-shadow-gradient-light: #434343;
+	--button-pill-box-shadow-gradient-dark: #343434;
+	--button-pill-background-active: #656565;
+
+	--slider-background-color: #959595;
+	--slider-background-gradient-light: #b4b4b4;
+	--slider-background-gradient-dark: #3c3d3e;
+	--slider-before-background: #d8d8d8;
+
+	#timer input {
+		transition: 0.2s ease-out;
+		filter: drop-shadow(0px 0px 10px var(--blue-light));
+	}
+
+	.active {
+		transition: 0.5s ease-out;
+		filter: drop-shadow(0px 0px 1px var(--blue-light));
+	}
+
+	button:active {
+		text-shadow: 0px, 0px, 2px var(--blue-light);
+	}
+}
